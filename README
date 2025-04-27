@@ -1,0 +1,36 @@
+npm init -y
+npm install typescript --save-dev
+npx tsc --init  # This creates a tsconfig.json file
+
+
+Once you’ve written the TypeScript code, compile it to JavaScript using:
+npx tsc
+This will generate the app.js file that is linked in your index.html.
+
+
+AI Safety Incident Dashboard
+This is a simple interactive dashboard for viewing, logging, and managing AI safety incidents. The dashboard allows users to view incidents, filter by severity, sort by reported date, and delete incidents. Users can also report new incidents with a title, description, and severity.
+
+Tech Stack
+Language: TypeScript
+
+Framework: None (Vanilla TypeScript)
+
+Styling: CSS (Flexbox for layout)
+
+Build Tool: TypeScript Compiler (tsc)
+
+Features
+View a list of AI safety incidents with title, severity, and reported date.
+
+Filter incidents by severity (Low, Medium, High).
+
+Sort incidents by reported date (Newest First, Oldest First).
+
+Toggle the visibility of incident descriptions.
+
+Add new incidents via a form, including title, description, and severity.
+
+Delete incidents from the list.
+
+
