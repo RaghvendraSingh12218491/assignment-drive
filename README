@@ -1,12 +1,3 @@
-npm init -y
-npm install typescript --save-dev
-npx tsc --init  # This creates a tsconfig.json file
-
-
-Once you’ve written the TypeScript code, compile it to JavaScript using:
-npx tsc
-This will generate the app.js file that is linked in your index.html.
-
 
 AI Safety Incident Dashboard
 This is a simple interactive dashboard for viewing, logging, and managing AI safety incidents. The dashboard allows users to view incidents, filter by severity, sort by reported date, and delete incidents. Users can also report new incidents with a title, description, and severity.
@@ -31,6 +22,56 @@ Toggle the visibility of incident descriptions.
 
 Add new incidents via a form, including title, description, and severity.
 
-Delete incidents from the list.
+
+Getting Started
+1. Clone the Repository
+First, clone the repository to your local machine.
+
+git clone https://github.com/your-username/ai-safety-dashboard.git
+2. Install Dependencies
+npm init -y
+npm install typescript --save-dev
+npx tsc --init  # This creates a tsconfig.json file
+3. Compile TypeScript
+To compile the TypeScript code into JavaScript, run the following command:
+
+npx tsc
+This will generate the app.js file from the app.ts file.
+
+4. Run the Project
+Once the TypeScript code has been compiled, you can open the index.html file in your browser to see the project in action.
+
+open index.html # For macOS
+start index.html # For Windows
+xdg-open index.html # For Linux
+The app will display the AI Safety Incident Dashboard with the following functionalities:
+
+View, add, and delete incidents.
+
+Filter by severity and sort by date.
+
+Toggle the description for each incident.
+
+Language/Framework Choice
+For this project, I used TypeScript for a strongly-typed, modern JavaScript experience, which enhances the reliability and maintainability of the code. I opted for vanilla TypeScript without a framework to keep it lightweight and focused on the core logic and functionality.
+
+CSS is used for basic styling and layout with Flexbox for responsive design.
+
+Design Decisions
+Incident Management: The incidents are managed within the frontend state (no backend required). Each incident has a unique id, and we can add, delete, or toggle the details of incidents without persisting data beyond the session.
+
+UI Components: I used a simple layout and ensured usability by including buttons for each action (view details, delete). The form for reporting a new incident includes basic input validation to ensure that the user provides necessary information.
+
+Responsiveness: The layout is designed to be responsive using Flexbox, which adjusts elements based on the screen size.
+
+Challenges
+Handling State: One challenge was ensuring the UI correctly updates when incidents are added or deleted. I made sure the render method is called each time the state changes to reflect the current list of incidents.
+
+TypeScript Setup: Setting up TypeScript without a framework was straightforward, but making sure that the code was correctly compiled and linked with the HTML required careful attention to the file structure.
+
+Optional Enhancements
+Backend Integration: In a real-world scenario, incidents would likely be stored in a database, and the frontend would communicate with a backend API.
+
+Advanced Styling: The current UI is simple and functional, but adding more advanced visual design (e.g., animations, custom themes) could improve the user experience.
 
 
